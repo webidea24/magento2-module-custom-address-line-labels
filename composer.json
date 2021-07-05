@@ -1,0 +1,21 @@
+{
+    "name": "webidea24/magento2-module-custom-address-line-labels",
+    "version": "1.0.0",
+    "description": "Magento 2 Module - Define custom labels for the address lines",
+    "type": "magento2-module",
+    "require": {
+        "magento/framework": "*",
+        "magento/module-checkout": "*"
+    },
+    "license": [
+        "MIT"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Webidea24\\CustomAdressLineLabels\\": ""
+        }
+    }
+}

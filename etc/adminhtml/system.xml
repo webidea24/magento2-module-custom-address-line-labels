@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="wi24" translate="label" sortOrder="150">
+            <label>WEBiDEA</label>
+        </tab>
+        <section id="wi24_custom_address_line_labels" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Custom address line labels</label>
+            <tab>wi24</tab>
+            <resource>Webidea24_CustomAddressLineLabels::config</resource>
+
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="line_1" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Line 1</label>
+                </field>
+                <field id="line_2" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Line 2</label>
+                </field>
+                <field id="line_3" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Line 3</label>
+                </field>
+                <field id="line_4" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Line 4</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
