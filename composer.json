@@ -14,7 +14,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "Webidea24\\CustomAdressLineLabels\\": ""
+            "Webidea24\\CustomAddressLineLabels\\": ""
         }
     }
 }
