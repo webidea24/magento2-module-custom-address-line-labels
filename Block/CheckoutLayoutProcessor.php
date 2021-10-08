@@ -15,6 +15,7 @@ class CheckoutLayoutProcessor implements LayoutProcessorInterface
      * @var \Magento\Framework\Stdlib\ArrayManager
      */
     private $arrayManager;
+
     /**
      * @var \Magento\Framework\App\Config\ScopeConfigInterface
      */
@@ -34,10 +35,19 @@ class CheckoutLayoutProcessor implements LayoutProcessorInterface
         foreach ($streetPaths as $streetPath) {
             $jsLayout = $this->arrayManager->remove($streetPath . '/label', $jsLayout);
             $childrenCount = count($this->arrayManager->get($streetPath . '/children', $jsLayout));
+
             for ($i = 0; $i < $childrenCount; $i++) {
                 $key = 'line_' . ($i + 1);
                 if (isset($config[$key]) && !empty($config[$key])) {
-                    $jsLayout = $this->arrayManager->set($streetPath . '/children/' . $i . '/label', $jsLayout, $config[$key]);
+                    if ($i === 0) {
+                        // main field
+                        $path = $streetPath . '/label';
+                    } else {
+                        // additional fields
+                        $path = $streetPath . '/children/' . $i . '/label';
+                    }
+
+                    $jsLayout = $this->arrayManager->set($path, $jsLayout, __($config[$key]));
                 }
             }
         }
