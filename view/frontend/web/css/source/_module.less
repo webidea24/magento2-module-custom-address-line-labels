@@ -1,0 +1,19 @@
+& when (@media-common = true) {
+    .field.street {
+        legend.label {
+            display: none;
+        }
+
+        .field {
+            ._lib-form-field-required();
+
+            .label {
+                display: block;
+                width: 100%;
+                height: auto;
+                position: static;
+                margin: @form-field-type-label-block__margin;
+            }
+        }
+    }
+}

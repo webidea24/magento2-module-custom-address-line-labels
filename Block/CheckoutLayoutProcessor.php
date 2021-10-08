@@ -39,15 +39,7 @@ class CheckoutLayoutProcessor implements LayoutProcessorInterface
             for ($i = 0; $i < $childrenCount; $i++) {
                 $key = 'line_' . ($i + 1);
                 if (isset($config[$key]) && !empty($config[$key])) {
-                    if ($i === 0) {
-                        // main field
-                        $path = $streetPath . '/label';
-                    } else {
-                        // additional fields
-                        $path = $streetPath . '/children/' . $i . '/label';
-                    }
-
-                    $jsLayout = $this->arrayManager->set($path, $jsLayout, __($config[$key]));
+                    $jsLayout = $this->arrayManager->set($streetPath . '/children/' . $i . '/label', $jsLayout, __($config[$key]));
                 }
             }
         }
