@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="wi24" translate="label" sortOrder="150">
+        <tab id="wi24" translate="label" sortOrder="200">
             <label>WEBiDEA</label>
         </tab>
         <section id="wi24_custom_address_line_labels" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
